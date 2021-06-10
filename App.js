@@ -1,20 +1,10 @@
 import React from 'react';
-import { Text, TextInput, View } from 'react-native';
+import { Text, View } from 'react-native';
 
-const Cat = () => {
-  const name = "Maru";
+const Cat = (props) => {
   return (
     <View>
-      <Text>Hello, I am...</Text>
-      <TextInput
-        style={{
-          height: 40, 
-          borderColor: 'gray', 
-          borderWidth: 1,
-          padding: 5
-        }}
-        placeholder="Name me!"
-      />
+      <Text>Hello, I am {props.name}!</Text>
     </View>
   );
 }
@@ -22,10 +12,9 @@ const Cat = () => {
 const Cafe = () => {
   return (
     <View>
-      <Text>Welcome!</Text>
-      <Cat />
-      <Cat />
-      <Cat />
+      <Cat name="Maru" />
+      <Cat name="Jellylorum" />
+      <Cat name="Spot" />
     </View>
   )
 }
